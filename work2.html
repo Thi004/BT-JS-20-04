@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work2</title>
+</head>
+<body>
+<h4>Yêu cầu : In ra tích các số chẵn và chia hết cho 5 từ a đến b</h4>
+<input type="number" placeholder="Nhập a" id="a">
+<input type="number" placeholder="Nhập b" id="b">
+<button onclick="tinhtich ()">TÍNH</button>
+<h5 id='kq'></h5>
+<script>
+    function tinhtich() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let tich = 1;
+        for (i = a; i <= b; i++) {
+            if (i % 5 == 0 && i % 2 == 0) {
+                tich = tich * i;
+            }
+        }
+        console.log(tich);
+        document.getElementById('kq').innerHTML = 'Tích các số chia hết cho 5 từ ' + a + ' đến ' + b + ' là: ' + tich;
+    }
+</script>
+</body>
+</html>

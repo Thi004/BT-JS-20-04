@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work3</title>
+</head>
+<body>
+<h4>Yêu cầu: In ra số lượng các số > 10 và chia hết cho 3 từ a đến b</h4>
+<input type="number" placeholder="Nhập a" id="a">
+<input type="number" placeholder="Nhập b" id="b">
+<button onclick="soluong ()">TÍNH</button>
+<h5 id='kq'></h6>
+<script>
+    function soluong () {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let dem = 0 ;
+        for (i=a; i <=b ; i++) {
+            if (i>10 && i%3 == 0) {
+              dem++ ;
+            }
+        }
+        console.log(dem);
+        document.getElementById('kq').innerHTML = 'Số lượng các số > 10 và chia hết cho 3 từ ' +a+ ' đến ' +b+ ' là: ' + dem;
+    }
+</script>
+</body>
+</html>

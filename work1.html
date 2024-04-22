@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>work1</title>
+</head>
+<body>
+<h4>Yêu cầu: in ra Tổng các số chia hết cho 6 từ a đến b</h4>
+<input type="number" placeholder="Nhập a" id="a">
+<input type="number" placeholder="Nhập b" id="b">
+<button onclick="tinhtong ()">TÍNH</button>
+<h5 id='kq'></h5>
+<script>
+    function tinhtong() {
+        let a = +document.getElementById('a').value;
+        let b = +document.getElementById('b').value;
+        let tong = 0;
+        for (i = a; i <= b; i++) {
+            if (i % 6 == 0) {
+                tong += i;
+            }
+        }
+        console.log(tong);
+        document.getElementById('kq').innerHTML = 'Tổng các số chia hết cho 6 từ ' + a + ' đến ' + b + ' là: ' + tong;
+    }
+</script>
+</body>
+</html>
